@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EXCLUSIVE: Claim Your Free Gaming Rewards!</title>
+    <link rel="stylesheet" href="usa.css">
+    
+</head>
+<body>
+    <h1>🎮 CONGRATULATIONS! YOU'VE BEEN SELECTED!</h1>
+    
+    <div class="timer" id="countdown">OFFER EXPIRES IN: 04:58</div>
+    
+    <div class="counter">
+        <span id="userCount">1,287</span> PLAYERS CLAIMED TODAY!
+    </div>
+    
+    <div class="progress-container">
+        <div class="progress-text">
+            <span>OFFER AVAILABILITY:</span>
+            <span>72% CLAIMED</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress">72% LEFT</div>
+        </div>
+    </div>
+    
+    <div class="testimonials">
+        <p>"Got 5000 free V-Bucks instantly! This is legit!" - Mike T., Texas</p>
+        <p>"I was skeptical but it actually worked! Got my COD Points in minutes." - Sarah J., California</p>
+    </div>
+    
+    <div class="games-container">
+        <!-- Game 1: Fortnite -->
+        <div class="game">
+            <img src="ft.jpg" alt="Fortnite V-Bucks">
+            <h3>Free Fortnite V-Bucks</h3>
+            <p>Get 5000 V-Bucks for your account!</p>
+            <a href="https://singingfiles.com/show.php?l=0&u=921465&id=67722" target="_blank">CLAIM NOW</a>
+        </div>
+        
+        <!-- Game 2: Call of Duty -->
+        <div class="game">
+            <img src="call.jpg" alt="Call of Duty Points">
+            <h3>Free COD Points</h3>
+            <p>2000 Free Call of Duty Points!</p>
+            <a href="https://singingfiles.com/show.php?l=0&u=921465&id=68544" target="_blank">GET POINTS</a>
+        </div>
+        
+        <!-- Game 3: Minecraft -->
+        <div class="game">
+            <img src="minecraft.png" alt="Minecraft Premium">
+            <h3>Minecraft Premium</h3>
+            <p>Full Premium Account Free!</p>
+            <a href="https://singingfiles.com/show.php?l=0&u=921465&id=68776" target="_blank">DOWNLOAD</a>
+        </div>
+        
+        <!-- Game 4: Roblox -->
+        <div class="game">
+            <img src="roblox.jpg" alt="Roblox Robux">
+            <h3>Free Robux</h3>
+            <p>1000 Robux for your account!</p>
+            <a href="https://singingfiles.com/show.php?l=0&u=921465&id=69381" target="_blank">GET ROBUX</a>
+        </div>
+    </div>
+
+    <div class="disclaimer">
+        * Disclaimer: This is not an official offer from the game developers. Offers require completing sponsor verification. 
+        Results may vary. This offer is available for limited time only. By claiming this offer you agree to our terms of service.
+        Must be 18+ years old. Void where prohibited.
+    </div>
+
+    <script>
+        // Countdown Timer
+        let timeLeft = 300;
+        const updateTimer = () => {
+            timeLeft--;
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            document.getElementById('countdown').innerHTML = 
+                `OFFER EXPIRES IN: ${minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+            
+            if(timeLeft <= 0) {
+                clearInterval(timerInterval);
+                document.getElementById('countdown').innerHTML = "OFFER EXPIRED!";
+            }
+        };
+        const timerInterval = setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // User Counter
+        let users = 1287;
+        setInterval(() => {
+            users += Math.floor(Math.random() * 5) + 1;
+            document.getElementById('userCount').innerText = users.toLocaleString();
+        }, 4000);
+
+        // Progress Bar Animation
+        let progress = 72;
+        const progressBar = document.querySelector('.progress');
+        setInterval(() => {
+            progress -= 0.1;
+            if(progress < 1) progress = 72;
+            progressBar.style.width = `${progress}%`;
+            progressBar.textContent = `${Math.round(progress)}% LEFT`;
+            document.querySelector('.progress-text span:last-child').textContent = `${Math.round(100-progress)}% CLAIMED`;
+        }, 5000);
+    </script>
+</body>
+</html>

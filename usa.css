@@ -1,0 +1,142 @@
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://i.imgur.com/Jf6o5yQ.jpg');
+            background-size: cover;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        h1 {
+            color: #ffcc00;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            font-size: 2.2em;
+        }
+        .timer {
+            background-color: rgba(255,0,0,0.7);
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 1.5em;
+            margin: 25px auto;
+            width: 320px;
+            font-weight: bold;
+        }
+        .counter {
+            background-color: rgba(0,150,0,0.7);
+            padding: 10px;
+            border-radius: 8px;
+            margin: 20px auto;
+            width: 280px;
+            font-size: 1.1em;
+        }
+        .games-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .game {
+            background-color: rgba(0,0,0,0.7);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(255,204,0,0.3);
+            width: 240px;
+            transition: transform 0.3s;
+            border: 2px solid #ffcc00;
+        }
+        .game:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255,204,0,0.5);
+        }
+        .game img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid #ffcc00;
+        }
+        .game h3 {
+            margin: 15px 0 10px;
+            font-size: 1.3em;
+        }
+        .game p {
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+        .game a {
+            display: block;
+            margin-top: 15px;
+            text-decoration: none;
+            background: linear-gradient(#ffcc00, #ff9900);
+            color: #000;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+        .game a:hover {
+            background: linear-gradient(#ff9900, #ff6600);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255,204,0,0.4);
+        }
+        .testimonials {
+            background-color: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 40px auto;
+            max-width: 700px;
+            border-left: 4px solid #ffcc00;
+            font-style: italic;
+        }
+        .progress-container {
+            width: 80%;
+            max-width: 600px;
+            margin: 30px auto;
+        }
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #333;
+            border-radius: 10px;
+            height: 25px;
+        }
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #ff3300, #ffcc00);
+            border-radius: 10px;
+            width: 72%;
+            text-align: center;
+            line-height: 25px;
+            color: black;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .disclaimer {
+            font-size: 0.8em;
+            color: #ccc;
+            margin-top: 40px;
+            padding: 15px;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 8px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+        @media (max-width: 768px) {
+            .game {
+                width: 90%;
+                max-width: 300px;
+            }
+            .progress-container {
+                width: 95%;
+            }
+        }
+    
